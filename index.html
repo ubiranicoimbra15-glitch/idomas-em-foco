@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Idiomas em Foco — plataforma educacional de Português e Espanhol.">
+<title>Idiomas em Foco</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#" data-tab="home"><span class="brand-mark">IF</span><span><strong>Idiomas</strong> em Foco</span></a>
+<nav class="nav">
+<button class="nav-btn active" data-tab="home">Início</button>
+<button class="nav-btn" data-tab="analysis">Análise</button>
+<button class="nav-btn" data-tab="pt">Quiz Português</button>
+<button class="nav-btn" data-tab="es">Quiz Espanhol</button>
+<button class="nav-btn" data-tab="about">Sobre</button>
+</nav>
+<button class="ghost-btn" id="resetBtn">Zerar progresso</button>
+</header>
+
+<main>
+<section id="home" class="tab active">
+<div class="hero">
+<div><span class="eyebrow">PLATAFORMA EDUCACIONAL</span>
+<h1>Aprender línguas com <span>tecnologia</span> e prática.</h1>
+<p>Explore frases de comunicação digital, reconheça características da escrita e teste seus conhecimentos em Português e Espanhol.</p>
+<div class="hero-actions"><button class="primary-btn" data-tab="analysis">Começar análise</button><button class="secondary-btn" data-tab="pt">Fazer quiz</button></div>
+</div>
+<div class="hero-card"><div class="mini-label">SEU PROGRESSO</div><div class="big-number" id="homePoints">0</div><div class="muted">pontos acumulados</div>
+<div class="progress-track"><div id="homeProgress" class="progress-fill"></div></div>
+<div class="mini-grid"><div><b id="homeRight">0</b><span>acertos</span></div><div><b id="homeWrong">0</b><span>erros</span></div><div><b id="homeActivity">0</b><span>atividades</span></div></div></div>
+</div>
+<div class="section-head"><span class="eyebrow">TRILHAS</span><h2>Escolha uma atividade</h2></div>
+<div class="cards three">
+<article class="feature-card"><div class="icon cyan">01</div><h3>Análise de frases</h3><p>Identifique pontuação, ortografia, gírias, abreviações, reduções e números usados no lugar de letras.</p><button class="text-btn" data-tab="analysis">Explorar →</button></article>
+<article class="feature-card"><div class="icon pink">02</div><h3>Quiz de Português</h3><p>Responda a 10 questões e acompanhe seus acertos, erros e pontuação.</p><button class="text-btn" data-tab="pt">Começar →</button></article>
+<article class="feature-card"><div class="icon purple">03</div><h3>Quiz de Espanhol</h3><p>Pratique vocabulário, gramática, interpretação e usos da língua espanhola.</p><button class="text-btn" data-tab="es">Começar →</button></article>
+</div>
+</section>
+
+<section id="analysis" class="tab">
+<div class="page-title"><span class="eyebrow">ATIVIDADE 01</span><h2>Análise de frases</h2><p>Selecione as características que aparecem em cada frase e confira sua resposta.</p></div>
+<div class="toolbar"><button class="filter active" data-lang="all">Todas</button><button class="filter" data-lang="pt">Português</button><button class="filter" data-lang="es">Espanhol</button></div>
+<div id="phraseList" class="phrase-grid"></div>
+</section>
+
+<section id="pt" class="tab"><div class="quiz-wrap"><div class="page-title"><span class="eyebrow">ATIVIDADE 02</span><h2>Quiz de Português</h2><p>10 questões • 5 alternativas • uma resposta correta por questão.</p></div>
+<div class="quiz-card"><div class="quiz-top"><span id="ptCount">Questão 1 de 10</span><div class="quiz-track"><div id="ptProgress" class="progress-fill"></div></div></div>
+<h3 id="ptQuestion"></h3><div id="ptOptions" class="options"></div><div id="ptFeedback" class="feedback"></div><button id="ptNext" class="primary-btn next-btn">Responder</button></div></div></section>
+
+<section id="es" class="tab"><div class="quiz-wrap"><div class="page-title"><span class="eyebrow">ATIVIDADE 03</span><h2>Quiz de Espanhol</h2><p>10 questões • 5 alternativas • uma resposta correta por questão.</p></div>
+<div class="quiz-card"><div class="quiz-top"><span id="esCount">Questão 1 de 10</span><div class="quiz-track"><div id="esProgress" class="progress-fill"></div></div></div>
+<h3 id="esQuestion"></h3><div id="esOptions" class="options"></div><div id="esFeedback" class="feedback"></div><button id="esNext" class="primary-btn next-btn">Responder</button></div></div></section>
+
+<section id="about" class="tab"><div class="page-title"><span class="eyebrow">SOBRE A PLATAFORMA</span><h2>Idiomas em Foco</h2><p>Um ambiente digital aberto para atividades de aprendizagem de Português e Espanhol.</p></div>
+<div class="about-grid"><article class="about-card"><h3>Objetivo</h3><p>Estimular a percepção sobre diferentes formas de comunicação e fortalecer o uso consciente da língua em ambientes digitais e escolares.</p></article>
+<article class="about-card"><h3>Estrutura aberta</h3><p>O projeto foi organizado em HTML, CSS e JavaScript, permitindo acrescentar novas frases, questões, níveis e atividades.</p></article>
+<article class="about-card"><h3>Próximas possibilidades</h3><p>Novos níveis, banco de questões, área do professor, relatórios de desempenho e outras línguas podem ser adicionados futuramente.</p></article></div></section>
+</main>
+<footer>Idiomas em Foco • Plataforma educacional • 2026</footer>
+<script src="script.js"></script>
+</body></html>
