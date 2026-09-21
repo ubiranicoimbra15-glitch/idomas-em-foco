@@ -79,3 +79,217 @@ next.onclick=()=>{if(!answered){fb.className="feedback wrong";fb.textContent="Es
 render()}
 document.querySelector("#resetBtn").onclick=()=>{if(confirm("Deseja realmente zerar seu progresso?")){state.points=state.right=state.wrong=state.activity=0;save()}};
 renderPhrases();setupQuiz("pt",PT);setupQuiz("es",ES);updateStats();
+// ======================================================
+// ATIVIDADE 05 - DETETIVES DA ESCRITA DIGITAL
+// ======================================================
+
+const atividadeRede = document.querySelector("#atividade05");
+
+if (atividadeRede) {
+
+  let redeVerificadas = 0;
+  let redeAcertos = 0;
+
+  const progressoRede = document.querySelector("#redeProgresso");
+  const pontosRede = document.querySelector("#redePontos");
+  const resultadoRede = document.querySelector("#redeResultadoFinal");
+
+  function atualizarResultadoRede() {
+    progressoRede.textContent = redeVerificadas;
+    pontosRede.textContent = redeAcertos;
+
+    if (redeVerificadas < 6) {
+      resultadoRede.textContent =
+        `Você já verificou ${redeVerificadas} de 6 questões. Continue!`;
+      return;
+    }
+
+    if (redeAcertos === 6) {
+      resultadoRede.textContent =
+        "Excelente! Você acertou as 6 questões. Agora observe suas reescritas e reflita sobre a adequação da linguagem aos diferentes contextos.";
+    } else if (redeAcertos >= 4) {
+      resultadoRede.textContent =
+        `Muito bem! Você acertou ${redeAcertos} de 6 questões. Reveja as explicações das questões que apresentaram dificuldade.`;
+    } else {
+      resultadoRede.textContent =
+        `Você acertou ${redeAcertos} de 6 questões. Leia novamente os comentários e observe as abreviações, gírias, marcas da oralidade e recursos de expressividade.`;
+    }
+  }
+
+
+  // VERIFICAR AS 6 QUESTÕES
+  document.querySelectorAll(".rede-questao").forEach((questao) => {
+
+    const botao = questao.querySelector(".verificar-rede");
+    const feedback = questao.querySelector(".rede-feedback");
+    const reescrita = questao.querySelector(".reescrita-rede");
+
+    botao.addEventListener("click", () => {
+
+      const marcada = questao.querySelector('input[type="radio"]:checked');
+
+      if (!marcada) {
+        feedback.className = "feedback wrong";
+        feedback.textContent =
+          "Escolha uma alternativa antes de verificar.";
+        return;
+      }
+
+      // impede contabilizar a mesma questão mais de uma vez
+      if (questao.dataset.respondida === "sim") {
+        feedback.textContent =
+          "Esta questão já foi verificada. Você pode continuar com a reescrita.";
+        reescrita.hidden = false;
+        return;
+      }
+
+      questao.dataset.respondida = "sim";
+      redeVerificadas++;
+
+      const correta = questao.dataset.correta;
+
+      if (marcada.value === correta) {
+        redeAcertos++;
+        feedback.className = "feedback correct";
+        feedback.textContent =
+          "✓ Correto! Você identificou adequadamente a característica da escrita digital.";
+      } else {
+        feedback.className = "feedback wrong";
+        feedback.textContent =
+          `✕ Ainda não. A alternativa correta é ${correta}. Observe novamente os elementos destacados no comentário.`;
+      }
+
+      // trava as alternativas depois da correção
+      questao.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.disabled = true;
+      });
+
+      botao.disabled = true;
+      botao.textContent = "Resposta verificada";
+
+      // libera a produção escrita
+      reescrita.hidden = false;
+
+      atualizarResultadoRede();
+    });
+  });
+
+
+  // COMPARAR AS REESCRITAS
+  document.querySelectorAll(".comparar-rede").forEach((botao) => {
+
+    botao.addEventListener("click", () => {
+
+      const area = botao.closest(".reescrita-rede");
+      const texto = area.querySelector(".rede-textarea");
+      const modelo = area.querySelector(".rede-modelo");
+
+      if (!texto.value.trim()) {
+        modelo.hidden = false;
+        modelo.innerHTML =
+          "<p><strong>Antes de comparar:</strong> escreva primeiro a sua própria versão da frase.</p>";
+        return;
+      }
+
+      // restaura o modelo original caso o aluno tenha clicado sem escrever antes
+      const questao = botao.closest(".rede-questao");
+      const numero = [...document.querySelectorAll(".rede-questao")].indexOf(questao);
+
+      const modelos = [
+        `“Esse vídeo está muito bom. Não sei por que vocês estão reclamando.”`,
+        `“Vocês viram isso? Fiquei muito surpresa. A gente precisa falar sobre isso.”`,
+        `“Eu vi isso ontem e fiquei muito surpreso. Não consegui acreditar.”`,
+        `“Este vídeo está buenísimo. No sé por qué todos se quejan.”`,
+        `“También pensé lo mismo. ¡Qué locura! Nadie me cree cuando lo cuento.”`,
+        `“¿Qué haces? Llevo un rato esperando tu respuesta. Contéstame, por favor.”`
+      ];
+
+      modelo.innerHTML =
+        `<p><strong>Uma possibilidade de reescrita:</strong> ${modelos[numero]}</p>
+         <p>Compare com sua resposta. Não existe necessariamente uma única versão correta: observe principalmente palavras completas, acentuação, pontuação e adequação ao contexto.</p>`;
+
+      modelo.hidden = false;
+      botao.textContent = "Comparação exibida";
+    });
+  });
+
+
+  // ======================================================
+  // MURAL DE DÚVIDAS
+  // ======================================================
+
+  const campoDuvida = document.querySelector("#redeDuvida");
+  const salvarDuvida = document.querySelector("#salvarDuvidaRede");
+  const limparDuvidas = document.querySelector("#limparDuvidasRede");
+  const listaDuvidas = document.querySelector("#listaDuvidasRede");
+  const mensagemDuvida = document.querySelector("#mensagemDuvidaRede");
+
+  const duvidasRede = [];
+
+  function mostrarDuvidasRede() {
+
+    listaDuvidas.innerHTML = "";
+
+    if (duvidasRede.length === 0) {
+      return;
+    }
+
+    const titulo = document.createElement("h4");
+    titulo.textContent = "Perguntas e observações registradas";
+    listaDuvidas.appendChild(titulo);
+
+    duvidasRede.forEach((duvida, indice) => {
+
+      const item = document.createElement("div");
+      item.className = "quiz-card";
+      item.style.marginTop = "10px";
+
+      const numero = document.createElement("strong");
+      numero.textContent = `Dúvida ${indice + 1}`;
+
+      const texto = document.createElement("p");
+      texto.textContent = duvida;
+
+      item.appendChild(numero);
+      item.appendChild(texto);
+      listaDuvidas.appendChild(item);
+    });
+  }
+
+
+  salvarDuvida.addEventListener("click", () => {
+
+    const texto = campoDuvida.value.trim();
+
+    if (!texto) {
+      mensagemDuvida.className = "feedback wrong";
+      mensagemDuvida.textContent =
+        "Escreva uma dúvida ou observação antes de registrar.";
+      return;
+    }
+
+    duvidasRede.push(texto);
+
+    campoDuvida.value = "";
+
+    mensagemDuvida.className = "feedback correct";
+    mensagemDuvida.textContent =
+      "✓ Sua dúvida foi registrada neste mural.";
+
+    mostrarDuvidasRede();
+  });
+
+
+  limparDuvidas.addEventListener("click", () => {
+
+    duvidasRede.length = 0;
+    listaDuvidas.innerHTML = "";
+
+    mensagemDuvida.className = "feedback";
+    mensagemDuvida.textContent =
+      "O mural foi limpo.";
+  });
+
+
+  atualizarResultadoRede();
+}
