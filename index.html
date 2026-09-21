@@ -176,195 +176,459 @@
   </div>
   <!-- ATIVIDADE 05 - COMENTÁRIOS DAS REDES SOCIAIS -->
 
-<div class="about-card" style="margin-top:30px;">
+<div class="about-card" style="margin-top:30px;" id="atividade05">
 
-  <span class="eyebrow">ATIVIDADE 05</span>
-  <h2>Comentários das Redes Sociais</h2>
+  <span class="eyebrow">ATIVIDADE 05 • INTERATIVA</span>
+  <h2>📱 Detetives da Escrita Digital</h2>
 
   <p>
-    Nas redes sociais, é comum encontrarmos abreviações, gírias,
-    marcas da oralidade e desvios da escrita formal.
-    Leia os comentários simulados abaixo e tente identificar essas
-    características antes de abrir a análise.
+    Leia cada comentário simulado, identifique características da escrita
+    digital e responda às atividades. Depois, verifique sua resposta,
+    leia a explicação e tente reescrever a mensagem para um contexto escolar.
   </p>
 
-  <h3>🇧🇷 Português — Observe e identifique</h3>
-
-  <!-- COMENTÁRIO 1 -->
   <div class="quiz-card" style="margin-top:20px;">
-    <strong>Comentário 01</strong>
-
+    <h3>📊 Seu progresso</h3>
     <p>
+      Questões verificadas:
+      <strong><span id="redeProgresso">0</span>/6</strong>
+      &nbsp; • &nbsp;
+      Acertos:
+      <strong><span id="redePontos">0</span>/6</strong>
+    </p>
+  </div>
+
+
+  <!-- ================= PORTUGUÊS ================= -->
+
+  <h3 style="margin-top:30px;">🇧🇷 Português</h3>
+
+  <!-- QUESTÃO 1 -->
+  <div class="quiz-card rede-questao" data-correta="A">
+    <p><strong>Comentário 01</strong></p>
+
+    <p class="texto-analise">
       "Mn, esse vídeo ta mto bom kkkk, n sei pq vcs tão reclamando."
     </p>
 
-    <details>
-      <summary>Ver análise</summary>
-      <p>
-        <strong>Mn</strong> → mano<br>
-        <strong>ta</strong> → está<br>
-        <strong>mto</strong> → muito<br>
-        <strong>kkk</strong> → representação escrita de riso<br>
-        <strong>n</strong> → não<br>
-        <strong>pq</strong> → porque<br>
-        <strong>vcs</strong> → vocês
-      </p>
-      <p>
-        O comentário apresenta abreviações, redução de palavras,
-        ausência de acentuação e marcas típicas da comunicação digital.
-      </p>
-    </details>
+    <p><strong>Qual característica aparece com maior destaque?</strong></p>
+
+    <label>
+      <input type="radio" name="rede1" value="A">
+      Abreviações, reduções e marcas da comunicação digital.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede1" value="B">
+      Linguagem científica e técnica.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede1" value="C">
+      Linguagem exclusivamente formal.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede1" value="D">
+      Ausência de qualquer marca de oralidade.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar resposta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Agora reescreva para um contexto escolar:</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Escreva aqui uma versão mais adequada..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescrita
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Uma possibilidade:</strong>
+          “Esse vídeo está muito bom. Não sei por que vocês estão reclamando.”
+        </p>
+        <p>
+          Não existe necessariamente uma única reescrita possível.
+          Compare sua produção observando abreviações, acentuação e adequação
+          ao contexto.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- COMENTÁRIO 2 -->
-  <div class="quiz-card" style="margin-top:15px;">
-    <strong>Comentário 02</strong>
 
-    <p>
+  <!-- QUESTÃO 2 -->
+  <div class="quiz-card rede-questao" data-correta="C" style="margin-top:18px;">
+    <p><strong>Comentário 02</strong></p>
+
+    <p class="texto-analise">
       "Genteee vcs viram isso??? Eu tô passadaaaa, agente precisa fala disso!"
     </p>
 
-    <details>
-      <summary>Ver análise</summary>
-      <p>
-        <strong>Genteee / passadaaaa</strong> → prolongamento de letras para
-        produzir expressividade.<br>
-        <strong>vcs</strong> → vocês<br>
-        <strong>agente</strong> → a gente<br>
-        <strong>fala</strong> → falar
-      </p>
-      <p>
-        O prolongamento de letras pode representar emoção na comunicação
-        digital. Já "agente", nesse contexto, deve ser escrito
-        <strong>"a gente"</strong>.
-      </p>
-    </details>
+    <p><strong>O prolongamento de letras em “Genteee” e “passadaaaa” indica:</strong></p>
+
+    <label>
+      <input type="radio" name="rede2" value="A">
+      Uma regra obrigatória da ortografia.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede2" value="B">
+      Uma característica exclusiva de textos acadêmicos.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede2" value="C">
+      Um recurso de expressividade comum na comunicação digital.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede2" value="D">
+      Uma forma obrigatória de plural.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar resposta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Reescreva a mensagem em registro mais formal:</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Digite sua reescrita..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescrita
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Uma possibilidade:</strong>
+          “Vocês viram isso? Fiquei muito surpresa. A gente precisa falar sobre isso.”
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- COMENTÁRIO 3 -->
-  <div class="quiz-card" style="margin-top:15px;">
-    <strong>Comentário 03</strong>
 
-    <p>
-      "Nss eu vi isso ontem e fiquei tipo: mano, não acredito véi 😂"
+  <!-- QUESTÃO 3 -->
+  <div class="quiz-card rede-questao" data-correta="B" style="margin-top:18px;">
+    <p><strong>Comentário 03</strong></p>
+
+    <p class="texto-analise">
+      "Nss eu vi isso ontem e fiquei tipo: mano, não acredito véi."
     </p>
 
-    <details>
-      <summary>Ver análise</summary>
-      <p>
-        <strong>Nss</strong> → redução de "Nossa"<br>
-        <strong>tipo</strong> → marcador frequente da oralidade<br>
-        <strong>mano</strong> → gíria / vocativo informal<br>
-        <strong>véi</strong> → forma coloquial
-      </p>
-      <p>
-        A frase aproxima a escrita da fala cotidiana e utiliza recursos
-        de expressividade comuns em ambientes digitais.
-      </p>
-    </details>
+    <p><strong>As palavras “mano”, “tipo” e “véi” aproximam a escrita:</strong></p>
+
+    <label>
+      <input type="radio" name="rede3" value="A">
+      Da linguagem jurídica.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede3" value="B">
+      Da fala cotidiana e informal.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede3" value="C">
+      Da escrita científica.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede3" value="D">
+      De documentos administrativos.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar resposta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Como você escreveria essa mensagem em uma atividade escolar?</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Digite sua versão..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescrita
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Uma possibilidade:</strong>
+          “Eu vi isso ontem e fiquei muito surpreso. Não consegui acreditar.”
+        </p>
+      </div>
+    </div>
   </div>
 
 
-  <h3 style="margin-top:30px;">🇪🇸 Español — Observa e identifica</h3>
+  <!-- ================= ESPANHOL ================= -->
 
-  <!-- COMENTÁRIO 4 -->
-  <div class="quiz-card" style="margin-top:20px;">
-    <strong>Comentario 04</strong>
+  <h3 style="margin-top:35px;">🇪🇸 Español</h3>
 
-    <p>
+  <!-- QUESTÃO 4 -->
+  <div class="quiz-card rede-questao" data-correta="D">
+    <p><strong>Comentario 04</strong></p>
+
+    <p class="texto-analise">
       "Brooo este video esta buenisimo jajaja, no se xq todos se quejan."
     </p>
 
-    <details>
-      <summary>Ver análisis</summary>
-      <p>
-        <strong>Brooo</strong> → forma coloquial e prolongamento expressivo<br>
-        <strong>video</strong> → vídeo<br>
-        <strong>esta</strong> → está<br>
-        <strong>buenisimo</strong> → buenísimo<br>
-        <strong>jajaja</strong> → representação de riso em espanhol<br>
-        <strong>se</strong> → sé<br>
-        <strong>xq</strong> → porque
-      </p>
-    </details>
+    <p><strong>¿Qué fenómeno aparece en “xq”?</strong></p>
+
+    <label>
+      <input type="radio" name="rede4" value="A">
+      Una forma verbal del pasado.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede4" value="B">
+      Un pronombre personal.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede4" value="C">
+      Una palabra técnica.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede4" value="D">
+      Una abreviación utilizada en la escritura digital.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar respuesta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Reescribe el comentario de manera más adecuada:</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Escribe aquí..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescritura
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Una posibilidad:</strong>
+          “Este vídeo está buenísimo. No sé por qué todos se quejan.”
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- COMENTÁRIO 5 -->
-  <div class="quiz-card" style="margin-top:15px;">
-    <strong>Comentario 05</strong>
 
-    <p>
-      "Tmb pensé lo mismo, q locuraaaa 😂 nadie me cree cuando lo cuento."
+  <!-- QUESTÃO 5 -->
+  <div class="quiz-card rede-questao" data-correta="A" style="margin-top:18px;">
+    <p><strong>Comentario 05</strong></p>
+
+    <p class="texto-analise">
+      "Tmb pensé lo mismo, q locuraaaa, nadie me cree cuando lo cuento."
     </p>
 
-    <details>
-      <summary>Ver análisis</summary>
-      <p>
-        <strong>Tmb</strong> → También<br>
-        <strong>q</strong> → qué<br>
-        <strong>locuraaaa</strong> → prolongamento expressivo de letras
-      </p>
-      <p>
-        Assim como no português, usuários do espanhol também empregam
-        reduções e recursos gráficos para tornar a mensagem mais rápida
-        ou expressiva.
-      </p>
-    </details>
+    <p><strong>“Tmb” representa una reducción de:</strong></p>
+
+    <label>
+      <input type="radio" name="rede5" value="A">
+      También.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede5" value="B">
+      Tampoco.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede5" value="C">
+      Tiempo.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede5" value="D">
+      Todo.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar resposta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Reescribe el comentario sin abreviaciones:</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Escribe tu versión..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescritura
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Una posibilidad:</strong>
+          “También pensé lo mismo. ¡Qué locura! Nadie me cree cuando lo cuento.”
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- COMENTÁRIO 6 -->
-  <div class="quiz-card" style="margin-top:15px;">
-    <strong>Comentario 06</strong>
 
-    <p>
+  <!-- QUESTÃO 6 -->
+  <div class="quiz-card rede-questao" data-correta="C" style="margin-top:18px;">
+    <p><strong>Comentario 06</strong></p>
+
+    <p class="texto-analise">
       "K haces??? llevo rato esperando tu respuesta, contestameeee."
     </p>
 
-    <details>
-      <summary>Ver análisis</summary>
-      <p>
-        <strong>K</strong> → Qué<br>
-        <strong>contestameeee</strong> → contéstame + prolongamento expressivo
-      </p>
-      <p>
-        A substituição de palavras por letras e o prolongamento gráfico
-        são recursos encontrados em determinadas práticas informais
-        de comunicação digital.
-      </p>
-    </details>
+    <p><strong>¿Qué sería más adecuado en un contexto formal?</strong></p>
+
+    <label>
+      <input type="radio" name="rede6" value="A">
+      Mantener “K” porque es obligatorio.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede6" value="B">
+      Aumentar todavía más las letras repetidas.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede6" value="C">
+      Escribir las palabras completas y utilizar la acentuación adecuada.
+    </label><br>
+
+    <label>
+      <input type="radio" name="rede6" value="D">
+      Eliminar todas las palabras de la frase.
+    </label>
+
+    <br><br>
+    <button type="button" class="primary-btn verificar-rede">
+      Verificar resposta
+    </button>
+
+    <div class="feedback rede-feedback"></div>
+
+    <div class="reescrita-rede" hidden>
+      <p><strong>✍️ Reescribe la frase:</strong></p>
+
+      <textarea class="rede-textarea" rows="3"
+        placeholder="Escribe una versión adecuada..."></textarea>
+
+      <br>
+      <button type="button" class="ghost-btn comparar-rede">
+        Comparar reescritura
+      </button>
+
+      <div class="rede-modelo" hidden>
+        <p>
+          <strong>Una posibilidad:</strong>
+          “¿Qué haces? Llevo un rato esperando tu respuesta. Contéstame, por favor.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- RESULTADO -->
+  <div class="quiz-card" style="margin-top:30px;">
+    <h3>🏆 Resultado da atividade</h3>
+
+    <p id="redeResultadoFinal">
+      Responda às seis questões para visualizar seu resultado.
+    </p>
   </div>
 
 
   <!-- COMPARAÇÃO -->
+  <div class="quiz-card" style="margin-top:25px;">
+    <h3>🌎 Português × Español</h3>
+
+    <p>
+      <strong>pq</strong> ↔ <strong>xq</strong> — reduções associadas a “porque”
+    </p>
+
+    <p>
+      <strong>tbm</strong> ↔ <strong>tmb</strong> — “também” / “también”
+    </p>
+
+    <p>
+      <strong>kkk / hahaha</strong> ↔ <strong>jajaja</strong> — representação
+      escrita do riso.
+    </p>
+
+    <p>
+      As duas línguas apresentam estratégias de economia linguística,
+      expressividade e aproximação entre fala e escrita nos ambientes digitais.
+    </p>
+  </div>
+
+
+  <!-- MURAL DE DÚVIDAS -->
   <div class="quiz-card" style="margin-top:30px;">
-
-    <h3>Português × Espanhol</h3>
-
-    <p>
-      Observe algumas aproximações entre as duas línguas:
-    </p>
+    <h3>💬 Mural de dúvidas e questionamentos</h3>
 
     <p>
-      <strong>Português:</strong> pq → porque<br>
-      <strong>Español:</strong> xq → porque
+      Ficou com alguma dúvida? Encontrou uma expressão diferente?
+      Escreva sua pergunta, comentário ou reflexão abaixo.
     </p>
 
-    <p>
-      <strong>Português:</strong> tbm → também<br>
-      <strong>Español:</strong> tmb → también
-    </p>
+    <label for="redeDuvida"><strong>Minha dúvida ou observação:</strong></label>
 
-    <p>
-      <strong>Português:</strong> kkk / hahaha<br>
-      <strong>Español:</strong> jajaja
-    </p>
+    <textarea id="redeDuvida" class="rede-textarea" rows="4"
+      placeholder="Ex.: Por que algumas abreviações aparecem tanto no português quanto no espanhol?"></textarea>
 
-    <p>
-      Apesar das diferenças entre as línguas, podemos observar estratégias
-      semelhantes de economia linguística, aproximação da oralidade e
-      expressão de emoções.
-    </p>
+    <br>
 
+    <button type="button" id="salvarDuvidaRede" class="primary-btn">
+      Registrar dúvida
+    </button>
+
+    <button type="button" id="limparDuvidasRede" class="ghost-btn">
+      Limpar mural
+    </button>
+
+    <div id="mensagemDuvidaRede" class="feedback"></div>
+
+    <div id="listaDuvidasRede" style="margin-top:20px;"></div>
+
+    <p style="margin-top:15px;">
+      <small>
+        Nesta versão, as dúvidas ficam registradas somente enquanto a página
+        permanecer aberta. Em uma etapa futura, o mural poderá ser conectado
+        a um sistema para envio das perguntas ao professor.
+      </small>
+    </p>
   </div>
 
 </div>
